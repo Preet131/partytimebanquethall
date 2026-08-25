@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PartyTime Banquet Hall & Entertainment | Luxury Venue Miramar FL</title>
+  <meta name="description" content="PartyTime Banquet Hall in Miramar, FL offers dark luxury event venue rentals up to 100 guests, decor bundles, 360 photo booth rentals, and VIP party bus transport. Call 954-985-6886 today!">
+  <meta name="keywords" content="Banquet Hall Miramar FL, Event Venue Miramar, 360 Photo Booth Rental Miramar, VIP Party Bus Miramar, Wedding Venue Miramar, Quinceanera Venue Miramar">
+  
+  <!-- Open Graph / Social Tags -->
+  <meta property="og:title" content="PartyTime Banquet Hall & Entertainment | Miramar, FL">
+  <meta property="og:description" content="Unforgettable Celebrations Start at PartyTime. 100-Guest Capacity, All-Inclusive Decor Bundles, 360 Photo Booth, VIP Party Bus.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <span class="announcement-badge">2026 Season</span>
+    <span>Now Booking 2026 Celebrations — Check Date Availability & Special Packages!</span>
+    <a href="#" class="announcement-link" data-open-quote>Check Availability &rarr;</a>
+  </div>
+
+  <!-- 2. Sticky Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">P</div>
+        <div class="logo-text-wrap">
+          <div class="logo-main"><span class="gold-text">PARTYTIME</span></div>
+          <div class="logo-sub">MIRAMAR &bull; FLORIDA</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#amenities">Banquet Hall</a>
+        <a href="#packages">Packages & Pricing</a>
+        <a href="#photobooth">360 Photo Booth</a>
+        <a href="#partybus">VIP Party Bus</a>
+        <a href="#gallery">Photo Gallery</a>
+        <a href="#contact">Location & Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:9549856886" class="phone-cta">
+          <i class="fas fa-phone-alt"></i> (954) 985-6886
+        </a>
+        <button class="btn btn-primary" data-open-quote>
+          Get a Quote
+        </button>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section & Availability Widget -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero.jpg" alt="PartyTime Luxury Banquet Hall Interior Miramar FL" width="1920" height="1080">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-crown"></i> MIRAMAR'S PREMIER NIGHTLIFE VENUE
+        </div>
+        <h1 class="hero-title">
+          Unforgettable <span class="gold-text">Celebrations</span> Start at PartyTime
+        </h1>
+        <p class="hero-sub">
+          South Florida's full-service luxury banquet hall & entertainment hub. Featuring 100-guest capacity, bespoke decor, 360 photo booth rentals, and VIP party bus transportation in Miramar, FL.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary btn-lg" data-open-quote>
+            <i class="fas fa-calendar-check"></i> Check Date & Get Instant Quote
+          </button>
+          <a href="#packages" class="btn btn-secondary btn-lg">
+            Explore Packages
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <i class="fas fa-star"></i> 5.0 Rated Venue
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-users"></i> Up to 100 Guests
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-map-marker-alt"></i> 6230 Miramar Pkwy
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Date Availability Card -->
+      <div class="availability-card">
+        <div class="card-title">
+          <span>Check Date Availability</span>
+          <i class="fas fa-calendar-day gold-text"></i>
+        </div>
+        <p class="card-subtitle">Select your event date to instantly check venue availability in Miramar.</p>
+        
+        <form id="hero-date-form">
+          <div class="form-group">
+            <label class="form-label" for="hero-date-input">Target Event Date</label>
+            <input type="date" id="hero-date-input" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="hero-guest-select">Expected Guests</label>
+            <select id="hero-guest-select" class="form-select">
+              <option value="50">1 - 50 Guests</option>
+              <option value="75">50 - 75 Guests</option>
+              <option value="100" selected>75 - 100 Guests (Max)</option>
+            </select>
+          </div>
+
+          <button type="button" id="hero-check-btn" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-search"></i> Check Availability
+          </button>
+
+          <div id="hero-availability-result" class="availability-result"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Key Stats & Key Amenities -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-user-friends"></i></div>
+        <div class="stat-number">100</div>
+        <div class="stat-label">Guest Capacity</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-utensils"></i></div>
+        <div class="stat-number">Full</div>
+        <div class="stat-label">Prep Kitchen Access</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="stat-number">VIP</div>
+        <div class="stat-label">Bar & Lounge Setup</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-bus-alt"></i></div>
+        <div class="stat-number">Party Bus</div>
+        <div class="stat-label">Luxury Transport</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities-section" id="amenities">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Venue Highlights</div>
+        <h2 class="section-title">Designed for <span class="gold-text">Opulent Celebrations</span></h2>
+        <p class="section-subtitle">Everything you need for a seamless, high-energy event under one roof in Miramar, FL.</p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-glass-martini-alt"></i></div>
+          <h3 class="amenity-title">Built-In Bar Setup</h3>
+          <p class="amenity-desc">Sleek backlit cocktail bar counter ready for licensed bartenders or bring-your-own-beverage service with ice wells and cocktail glass displays.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
+          <h3 class="amenity-title">Full Commercial Kitchen</h3>
+          <p class="amenity-desc">Spacious food prep station with stainless steel counters, refrigeration, warming trays, and dedicated caterer staging zone.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="amenity-title">Custom Uplighting & RGB</h3>
+          <p class="amenity-desc">State-of-the-art ambient LED lighting color-matched to your theme — from champagne gold elegance to vibrant nightclub party glow.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-compact-disc"></i></div>
+          <h3 class="amenity-title">DJ Booth & Surround Sound</h3>
+          <p class="amenity-desc">Plug-and-play acoustics with club-grade bass subwoofers, DJ console connection, and wireless mic systems.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-camera"></i></div>
+          <h3 class="amenity-title">360 & Salsa 2 Photo Booths</h3>
+          <p class="amenity-desc">State-of-the-art 360 spin video platform and Salsa 2 digital photo booth with instant phone sharing and custom event overlays.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-shuttle-van"></i></div>
+          <h3 class="amenity-title">VIP Party Bus Transport</h3>
+          <p class="amenity-desc">Arrive in grand style with our 20-30 passenger luxury party bus featuring stargazer ceiling lights, leather lounge seating, and sound systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. All-Inclusive Packages & Pricing -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Pricing & Bundles</div>
+        <h2 class="section-title">Transparent <span class="gold-text">All-Inclusive Packages</span></h2>
+        <p class="section-subtitle">No hidden fees. Choose the venue rental tier or full-service decor bundle that fits your vision.</p>
+      </div>
+
+      <div class="packages-tabs">
+        <button class="tab-btn active" data-tab="all">All Packages</button>
+        <button class="tab-btn" data-tab="venue">Venue Rental</button>
+        <button class="tab-btn" data-tab="decor">Venue + Decor</button>
+        <button class="tab-btn" data-tab="addons">Add-On Experiences</button>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1 -->
+        <div class="pricing-card" data-category="venue">
+          <div class="package-name">Essential Hall Rental</div>
+          <div class="package-tagline">Ideal for self-decorated events & custom planners</div>
+          <div class="package-price">$2,000 <span>/ 10-Hr Rental</span></div>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> 10-Hour Full Venue Access</li>
+            <li><i class="fas fa-check"></i> Up to 100 Guest Capacity</li>
+            <li><i class="fas fa-check"></i> Banquet Round Tables & Chiavari Chairs</li>
+            <li><i class="fas fa-check"></i> Full Prep Kitchen & Bar Access</li>
+            <li><i class="fas fa-check"></i> Standard Warm Gold Uplighting</li>
+            <li><i class="fas fa-check"></i> Post-Event Clean-Up Crew Included</li>
+          </ul>
+          <button class="btn btn-secondary" data-open-quote style="width: 100%;">Select Package</button>
+        </div>
+
+        <!-- Package 2 (Popular) -->
+        <div class="pricing-card popular" data-category="decor">
+          <div class="popular-badge">Most Popular</div>
+          <div class="package-name">Venue + Luxury Decor</div>
+          <div class="package-tagline">Complete hands-free styling & VIP ambience</div>
+          <div class="package-price">$3,500+ <span>/ All-Inclusive</span></div>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> Everything in Essential Hall Rental</li>
+            <li><i class="fas fa-check"></i> Bespoke Stage Backdrop & Golden Arch</li>
+            <li><i class="fas fa-check"></i> Luxury Table Linens, Chargers & Cutlery</li>
+            <li><i class="fas fa-check"></i> Floral Centerpieces & Throne Chairs</li>
+            <li><i class="fas fa-check"></i> Custom Theme RGB Uplighting FX</li>
+            <li><i class="fas fa-check"></i> Dedicated Venue Decor Coordinator</li>
+          </ul>
+          <button class="btn btn-primary" data-open-quote style="width: 100%;">Book Decor Bundle</button>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="pricing-card" data-category="addons">
+          <div class="package-name">360 & Salsa 2 Photo Booth</div>
+          <div class="package-tagline">The ultimate interactive guest entertainment</div>
+          <div class="package-price">$150 <span>/ Hour</span></div>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> 360 Spin Video Platform or Salsa 2 Station</li>
+            <li><i class="fas fa-check"></i> Unlimited HD Videos, GIFs & Boomerangs</li>
+            <li><i class="fas fa-check"></i> Custom Branded Frame Overlay</li>
+            <li><i class="fas fa-check"></i> Fun Party Props & Cold Sparkler FX</li>
+            <li><i class="fas fa-check"></i> Instant SMS / Email / AirDrop Sharing</li>
+            <li><i class="fas fa-check"></i> On-Site Booth Attendant</li>
+          </ul>
+          <button class="btn btn-secondary" data-open-quote style="width: 100%;">Add Photo Booth</button>
+        </div>
+
+        <!-- Package 4 -->
+        <div class="pricing-card" data-category="addons">
+          <div class="package-name">VIP Luxury Party Bus</div>
+          <div class="package-tagline">Chauffeured transportation for your entourage</div>
+          <div class="package-price">$600+ <span>/ Trip</span></div>
+          <ul class="package-features">
+            <li><i class="fas fa-check"></i> 20 - 30 Passenger Capacity</li>
+            <li><i class="fas fa-check"></i> Stargazer Fiber Optic Ceiling</li>
+            <li><i class="fas fa-check"></i> Leather Perimeter Seating & Bar Counter</li>
+            <li><i class="fas fa-check"></i> Bluetooth Surround Sound System</li>
+            <li><i class="fas fa-check"></i> Professional Uniformed Chauffeur</li>
+            <li><i class="fas fa-check"></i> Roundtrip Pick-up & Drop-off</li>
+          </ul>
+          <button class="btn btn-secondary" data-open-quote style="width: 100%;">Reserve Party Bus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Photo Booth & VIP Party Bus Showcase Section -->
+  <section class="feature-showcase-section" id="photobooth">
+    <div class="container">
+      <!-- Block 1: 360 Photo Booth -->
+      <div class="showcase-block">
+        <div class="showcase-img-wrap">
+          <img src="assets/images/photobooth.jpg" alt="360 Photo Booth Rental Miramar FL" width="800" height="600">
+          <div class="showcase-badge">Signature Experience</div>
+        </div>
+        <div class="showcase-content">
+          <div class="section-tag">Interactive Entertainment</div>
+          <h3>360 Spin & Salsa 2 <span class="gold-text">Photo Booths</span></h3>
+          <p>Elevate your event experience with high-definition slow-motion video captures and instant digital sharing. Guests step onto the illuminated LED platform while our camera captures 360-degree memories with cold sparkler effects and custom overlays.</p>
+          <div class="feature-list-grid">
+            <div class="feature-list-item"><i class="fas fa-bolt"></i> Instant Digital Sharing</div>
+            <div class="feature-list-item"><i class="fas fa-magic"></i> Custom Video Overlays</div>
+            <div class="feature-list-item"><i class="fas fa-glasses"></i> Premium Prop Station</div>
+            <div class="feature-list-item"><i class="fas fa-user-shield"></i> On-Site Attendant</div>
+          </div>
+          <button class="btn btn-neon" data-open-quote>
+            <i class="fas fa-camera"></i> Reserve Photo Booth ($150/hr)
+          </button>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Block 2: VIP Party Bus -->
+      <div class="showcase-block reverse" id="partybus">
+        <div class="showcase-img-wrap">
+          <img src="assets/images/partybus.jpg" alt="VIP Party Bus Transportation Miramar FL" width="800" height="600">
+          <div class="showcase-badge">Luxury Transport</div>
+        </div>
+        <div class="showcase-content">
+          <div class="section-tag">VIP Travel</div>
+          <h3>PartyTime VIP <span class="gold-text">Transportation</span></h3>
+          <p>Keep the party rolling before you even arrive at the venue. Our luxury party buses feature plush leather perimeter seating, star-lit ceilings, bar setups with ice buckets, and club sound systems for weddings, bachelor/bachelorette parties, and night-out celebrations.</p>
+          <div class="feature-list-grid">
+            <div class="feature-list-item"><i class="fas fa-music"></i> 5,000W Sound System</div>
+            <div class="feature-list-item"><i class="fas fa-glass-cheers"></i> Built-In Marble Bar</div>
+            <div class="feature-list-item"><i class="fas fa-star"></i> Stargazer Ceiling FX</div>
+            <div class="feature-list-item"><i class="fas fa-shield-alt"></i> Licensed & Insured Drivers</div>
+          </div>
+          <button class="btn btn-primary" data-open-quote>
+            <i class="fas fa-bus"></i> Book VIP Transport
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Filterable Event Photo Gallery -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Event Gallery</div>
+        <h2 class="section-title">Moments of <span class="gold-text">Pure Celebration</span></h2>
+        <p class="section-subtitle">Take a virtual tour of real weddings, milestone birthdays, quinceañeras, and baby showers hosted at PartyTime Miramar.</p>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="weddings">Weddings</button>
+        <button class="filter-btn" data-filter="birthdays">Milestone Birthdays</button>
+        <button class="filter-btn" data-filter="showers">Showers</button>
+        <button class="filter-btn" data-filter="decor">Decor Setups</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="weddings">
+          <img src="assets/images/wedding.jpg" alt="Dark Luxury Wedding Reception Setup" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Weddings</div>
+            <div class="gallery-title">Romantic Candlelight Wedding Reception</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="birthdays">
+          <img src="assets/images/birthday.jpg" alt="30th Birthday Celebration Lighted Numbers" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Milestone Birthdays</div>
+            <div class="gallery-title">VIP 30th Birthday Champagne Tower</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="showers">
+          <img src="assets/images/shower.jpg" alt="Chic Baby Shower Floral Arch" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Showers</div>
+            <div class="gallery-title">Elegant Floral Arch & Dessert Lounge</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor">
+          <img src="assets/images/decor.jpg" alt="Opulent Stage Decor Bundle" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Decor Setups</div>
+            <div class="gallery-title">Gold Arch Backdrop & Throne Chairs</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor">
+          <img src="assets/images/lounge.jpg" alt="Nightlife Lounge DJ Setup" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Decor Setups</div>
+            <div class="gallery-title">Backlit VIP Bar & DJ Console</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="weddings">
+          <img src="assets/images/hero.jpg" alt="Full Banquet Hall View Miramar" width="600" height="450">
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Weddings</div>
+            <div class="gallery-title">Full Hall Dinner & Dance Floor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox-modal">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <img src="" id="lightbox-img" alt="Gallery Lightbox Preview">
+    </div>
+  </div>
+
+  <!-- 8. Simple 3-Step Booking Process -->
+  <section class="process-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Simple <span class="gold-text">3-Step Booking</span></h2>
+        <p class="section-subtitle">We make organizing your dream event in Miramar simple, straightforward, and stress-free.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <div class="process-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3 class="process-title">Choose Date & Guests</h3>
+          <p class="process-desc">Select your date on our online availability tool or call (954) 985-6886 to verify open slots for 2026.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <div class="process-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3 class="process-title">Select Package & Add-ons</h3>
+          <p class="process-desc">Choose essential venue rental or customize with our luxury decor bundles, 360 photo booth, and VIP bus transport.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <div class="process-icon"><i class="fas fa-glass-cheers"></i></div>
+          <h3 class="process-title">Celebrate Stress-Free</h3>
+          <p class="process-desc">Our dedicated on-site venue team handles prep, staging, and clean-up so you can dance the night away!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Client Testimonials Carousel -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Client Reviews</div>
+        <h2 class="section-title">Loved by <span class="gold-text">South Florida Hosts</span></h2>
+        <p class="section-subtitle">Read why families and party hosts choose PartyTime for their most memorable milestones.</p>
+      </div>
+
+      <div class="testimonials-wrapper">
+        <div class="testimonial-card active">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"PartyTime made my daughter's Sweet 16 absolutely magical! The gold decor bundle was stunning and the 360 photo booth had a line all night. The venue team in Miramar was top tier!"</p>
+          <div class="author-info">
+            <div class="author-avatar">MS</div>
+            <div>
+              <div class="author-name">Maria S.</div>
+              <div class="author-event">Sweet 16 Celebration &bull; Miramar, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Renting the hall + VIP Party Bus combo for my 30th birthday was the best decision ever. Arrived in style and the DJ sound setup inside the hall was insane! 10/10 recommend PartyTime."</p>
+          <div class="author-info">
+            <div class="author-avatar">DR</div>
+            <div>
+              <div class="author-name">David R.</div>
+              <div class="author-event">30th VIP Birthday &bull; Pembroke Pines, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"The prep kitchen and bar setup made catering our 90-guest wedding reception so easy. Clean, spacious, luxury lighting, and great price point compared to Miami venues!"</p>
+          <div class="author-info">
+            <div class="author-avatar">VJ</div>
+            <div>
+              <div class="author-name">Vanessa & Jayson</div>
+              <div class="author-event">Wedding Reception &bull; Miramar, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-nav">
+          <button class="nav-arrow" id="testimonial-prev" aria-label="Previous Review"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-arrow" id="testimonial-next" aria-label="Next Review"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Interactive Multi-Step Quote/Date Inquiry Form Modal -->
+  <div class="modal-backdrop" id="quote-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      
+      <div class="text-center" style="margin-bottom: 24px;">
+        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 6px;">Instant <span class="gold-text">Quote & Date Inquiry</span></h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Configure your celebration specs for an instant price estimate & date check.</p>
+      </div>
+
+      <!-- Step Bar -->
+      <div class="step-bar">
+        <div class="step-dot active">1</div>
+        <div class="step-dot">2</div>
+        <div class="step-dot">3</div>
+        <div class="step-dot">4</div>
+      </div>
+
+      <form id="multi-step-quote-form">
+        <!-- Step 1: Date & Guests -->
+        <div class="form-step active" data-step="1">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Step 1: Event Date & Guests</h4>
+          <div class="form-group">
+            <label class="form-label" for="modal-date-input">Target Event Date *</label>
+            <input type="date" id="modal-date-input" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-guest-count">Estimated Guest Count</label>
+            <select id="modal-guest-count" class="form-select">
+              <option value="50">1 - 50 Guests</option>
+              <option value="75">50 - 75 Guests</option>
+              <option value="100" selected>75 - 100 Guests (Max)</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary btn-next-step" style="width: 100%; margin-top: 20px;">
+            Next: Select Event Type &rarr;
+          </button>
+        </div>
+
+        <!-- Step 2: Event Type -->
+        <div class="form-step" data-step="2">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Step 2: Celebration Type</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="wedding" checked>
+              <span>Wedding Reception</span>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="birthday">
+              <span>Milestone Birthday</span>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="quinceanera">
+              <span>Sweet 16 / Quinceañera</span>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="shower">
+              <span>Baby / Bridal Shower</span>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="corporate">
+              <span>Corporate / VIP Party</span>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="event-type" value="other">
+              <span>Other Celebration</span>
+            </label>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <button type="button" class="btn btn-secondary btn-prev-step" style="flex: 1;">&larr; Back</button>
+            <button type="button" class="btn btn-primary btn-next-step" style="flex: 2;">Next: Choose Package &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Package & Add-ons -->
+        <div class="form-step" data-step="3">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 16px;">Step 3: Base Package & Add-Ons</h4>
+          
+          <label class="form-label">Select Primary Package</label>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+            <label class="addon-card">
+              <input type="radio" name="package-tier" value="venue-only" checked>
+              <div>
+                <strong>Essential Hall Rental ($2,000)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">10-Hr rental, tables, chiavari chairs, kitchen/bar</div>
+              </div>
+            </label>
+            <label class="addon-card">
+              <input type="radio" name="package-tier" value="venue-decor">
+              <div>
+                <strong>Venue + Luxury Decor Bundle ($3,500)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Hall rental + golden arch, backdrop, throne chairs & linens</div>
+              </div>
+            </label>
+          </div>
+
+          <label class="form-label">Optional Add-On Experiences</label>
+          <div class="addon-grid">
+            <label class="addon-card">
+              <input type="checkbox" id="addon-photobooth" value="300">
+              <div>
+                <div>360 Spin Photo Booth</div>
+                <div style="font-size: 0.75rem; color: var(--gold-light);">+$300 (2 Hours)</div>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" id="addon-partybus" value="600">
+              <div>
+                <div>VIP Party Bus Transport</div>
+                <div style="font-size: 0.75rem; color: var(--gold-light);">+$600 (Roundtrip)</div>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" id="addon-uplighting" value="250">
+              <div>
+                <div>Custom RGB Uplighting FX</div>
+                <div style="font-size: 0.75rem; color: var(--gold-light);">+$250</div>
+              </div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" id="addon-djsound" value="400">
+              <div>
+                <div>DJ Sound & Console Package</div>
+                <div style="font-size: 0.75rem; color: var(--gold-light);">+$400</div>
+              </div>
+            </label>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button type="button" class="btn btn-secondary btn-prev-step" style="flex: 1;">&larr; Back</button>
+            <button type="button" class="btn btn-primary btn-next-step" style="flex: 2;">Next: Contact & Reserve &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Summary & Submit -->
+        <div class="form-step" data-step="4">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 12px;">Step 4: Contact & Lock Date</h4>
+          
+          <div class="quote-summary-box">
+            <div class="summary-row">
+              <span>Base Package:</span>
+              <span id="summary-base-price">$2,000</span>
+            </div>
+            <div class="summary-row">
+              <span>Add-Ons Total:</span>
+              <span id="summary-addons-price">$0</span>
+            </div>
+            <div class="summary-total">
+              <span>Estimated Package Total:</span>
+              <span id="summary-total-price">$2,000</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="client-name">Your Full Name *</label>
+            <input type="text" id="client-name" class="form-input" placeholder="e.g. Jessica Davis" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="client-phone">Phone Number *</label>
+            <input type="tel" id="client-phone" class="form-input" placeholder="(954) 985-6886" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="client-email">Email Address *</label>
+            <input type="email" id="client-email" class="form-input" placeholder="jessica@example.com" required>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-prev-step" style="flex: 1;">&larr; Back</button>
+            <button type="submit" class="btn btn-primary" style="flex: 2;">
+              <i class="fas fa-paper-plane"></i> Submit Inquiry & Lock Date
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 11. Location & Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Find Us in Miramar</div>
+        <h2 class="section-title">Visit Our <span class="gold-text">Miramar Showroom</span></h2>
+        <p class="section-subtitle">Conveniently located on Miramar Parkway with ample guest parking.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Interactive Map Visualizer Card -->
+        <div class="map-card">
+          <div class="map-visualizer">
+            <div class="map-grid-pattern"></div>
+            <div class="map-pin-box">
+              <div class="pin-pulse"><i class="fas fa-map-marker-alt"></i></div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px;">PartyTime Banquet Hall</h3>
+              <p style="font-size: 0.9rem; color: var(--gold-light); margin-bottom: 12px;">6230 Miramar Parkway, Miramar, FL 33023</p>
+              <a href="https://maps.google.com/?q=6230+Miramar+Parkway,+Miramar,+FL+33023" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="font-size: 0.85rem; padding: 6px 14px;">
+                <i class="fas fa-directions"></i> Get Google Maps Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Details & Hours -->
+        <div class="contact-info-card">
+          <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 24px;">Direct Contact Information</h3>
+          
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div>
+              <div class="contact-detail-title">Address</div>
+              <div class="contact-detail-val">6230 Miramar Parkway, Miramar, FL 33023</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="contact-detail-title">Direct Phone</div>
+              <div class="contact-detail-val"><a href="tel:9549856886" style="color: var(--gold-light);">(954) 985-6886</a></div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="contact-detail-title">Operating Hours</div>
+              <div class="contact-detail-val">Mon - Sun: 10:00 AM - 9:00 PM (By Appointment)</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-detail-title">Email</div>
+              <div class="contact-detail-val">events@partytimemiramar.com</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;">
+            <button class="btn btn-primary" data-open-quote style="width: 100%;">
+              <i class="fas fa-calendar-check"></i> Schedule Venue Walkthrough
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-list">
+        <h3 class="section-title text-center" style="font-size: 1.8rem; margin: 60px 0 30px;">Frequently Asked Questions</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is the maximum guest capacity at PartyTime Miramar?</span>
+            <i class="fas fa-chevron-down gold-text"></i>
+          </div>
+          <div class="faq-answer">
+            Our Miramar banquet hall comfortably accommodates up to 100 seated guests with banquet round tables, Chiavari chairs, dance floor space, and head table setups.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can we bring outside catering and drinks?</span>
+            <i class="fas fa-chevron-down gold-text"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! PartyTime is an open-caterer venue. You are welcome to bring your own caterer or food. We provide access to our commercial prep kitchen with stainless steel counters, refrigeration, and warming setups.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does the 360 photo booth add-on work?</span>
+            <i class="fas fa-chevron-down gold-text"></i>
+          </div>
+          <div class="faq-answer">
+            Our 360 spin photo booth rental ($150/hr) includes an illuminated LED platform, high-speed camera, custom branded video overlay, party props, cold sparkler FX, and an on-site attendant for instant guest sharing via SMS or AirDrop.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is the VIP Party Bus available separately?</span>
+            <i class="fas fa-chevron-down gold-text"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! You can reserve our 20-30 passenger VIP Party Bus for venue pick-up/drop-off or standalone transportation across Broward and Miami-Dade counties.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">P</div>
+            <div>
+              <span>PartyTime</span>
+              <span class="logo-sub">MIRAMAR &bull; FL</span>
+            </div>
+          </div>
+          <p>Miramar's premier dark luxury banquet hall and celebratory entertainment hub. All-inclusive venue rentals, decor styling, 360 photo booths, and VIP transportation.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram @partytimeentertainmentfl"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok @partytimeviptransportation"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#amenities">Banquet Hall Amenities</a></li>
+            <li><a href="#packages">Packages & Pricing</a></li>
+            <li><a href="#photobooth">360 Photo Booth Rental</a></li>
+            <li><a href="#partybus">VIP Party Bus Rental</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Celebrations</h4>
+          <ul class="footer-links">
+            <li><a href="#packages">Weddings & Receptions</a></li>
+            <li><a href="#packages">Milestone Birthdays</a></li>
+            <li><a href="#packages">Sweet 16s & Quinceañeras</a></li>
+            <li><a href="#packages">Baby & Bridal Showers</a></li>
+            <li><a href="#packages">VIP Corporate Parties</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Location & Contact</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">
+            6230 Miramar Parkway<br>
+            Miramar, FL 33023
+          </p>
+          <p style="font-weight: 700; color: var(--gold-light); margin-bottom: 16px;">
+            Direct Line: (954) 985-6886
+          </p>
+          <button class="btn btn-primary btn-sm" data-open-quote style="width: 100%;">
+            Get Instant Quote
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PartyTime Banquet Hall & Entertainment. All Rights Reserved. 6230 Miramar Pkwy, Miramar, FL.</div>
+        <div>Designed with Dark Luxury Elegance</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. Persistent Mobile Bottom Action Bar (<768px) -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:9549856886" class="btn btn-secondary" style="padding: 10px 14px; font-size: 0.85rem;">
+      <i class="fas fa-phone-alt"></i> Call 954-985-6886
+    </a>
+    <button class="btn btn-primary" data-open-quote style="padding: 10px 14px; font-size: 0.85rem;">
+      <i class="fas fa-calculator"></i> Instant Quote
+    </button>
+  </div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="main.js" type="module"></script>
+</body>
+</html>
